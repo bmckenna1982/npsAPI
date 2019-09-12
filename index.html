@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>National Parks Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="wrap">
+        <header>
+            <h1>Find national parks</h1>
+            <h2>Planning a trip?</br>We can help locate state parks in one or more states.</h2>        
+        </header>
+        <section class="form-container">
+            <form class="search-form" action="#">
+                <Fieldset>
+                    <label for="state" class="label-state">Enter the 2 letter abbreviation for the state or states you want to visit. Separate each abbreviation with a comma. </label>
+                    <input id="state" type="text" class="input-state" value="CA,NV" required>
+                    <label for="resultNum" class="label-resultNum">Maximun number of results to show</label>
+                    <input id="resultNum" type="text" class="input-resultNum" value="10" required>
+                    <button type="submit" class="submit-button">Find parks</button>
+                </Fieldset>
+            </form>
+        </section>
+        <section class="results-display hidden">        
+        </section>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="index.js"></script>
+    </main>
+</body>
+</html>
