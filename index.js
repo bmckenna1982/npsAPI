@@ -37,7 +37,7 @@ function getParks() {
 }
 
 function formatQueryParams(params) {
-    queryItems = Object.keys(params).map(key => `${key}=${params[key]}`);    
+    queryItems = Object.keys(params).map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`);    
     return queryItems.join('&');
 
 }
@@ -57,7 +57,7 @@ function displayParks(responseJson) {
         $('.results-display').html(sectionHtml);
         $('section').removeClass('hidden');
     } else {
-    $('.results-display').append(`
+    $('.results-display').html(`
                 <div class="result invalid-text">
                     <h2>The search returned 0 results. Make sure you entered a valid US state abbreviation.</h2>                    
                 </div>`)
